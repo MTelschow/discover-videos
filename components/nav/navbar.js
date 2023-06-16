@@ -67,16 +67,16 @@ const NavBar = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <Link className={styles.logoLink} href="/">
-          <a>
+
             <div className={styles.logoWrapper}>
               <Image
                 src="/static/netflix.svg"
                 alt="Netflix logo"
-                width="128px"
-                height="34px"
+                width="128"
+                height="34"
               />
             </div>
-          </a>
+
         </Link>
 
         <ul className={styles.navItems}>
@@ -95,8 +95,8 @@ const NavBar = () => {
               <Image
                 src={"/static/expand_more.svg"}
                 alt="Expand dropdown"
-                width="24px"
-                height="24px"
+                width="24"
+                height="24"
               />
             </button>
 

@@ -35,10 +35,18 @@ const Login = () => {
     setEmail(email);
   };
 
+  const validateEmail = (email) => {
+		return String(email)
+			.toLowerCase()
+			.match(
+				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			);
+	};
+
   const handleLoginWithEmail = async (e) => {
     e.preventDefault();
 
-    if (email) {
+    if (validateEmail(email)) {
       // log in a user by their email
       try {
         setIsLoading(true);
@@ -83,16 +91,16 @@ const Login = () => {
       <header className={styles.header}>
         <div className={styles.headerWrapper}>
           <Link className={styles.logoLink} href="/">
-            <a>
+
               <div className={styles.logoWrapper}>
                 <Image
                   src="/static/netflix.svg"
                   alt="Netflix logo"
-                  width="128px"
-                  height="34px"
+                  width="128"
+                  height="34"
                 />
               </div>
-            </a>
+
           </Link>
         </div>
       </header>

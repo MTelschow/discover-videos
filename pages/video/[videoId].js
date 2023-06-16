@@ -11,6 +11,7 @@ import { getYoutubeVideoById } from "../../lib/videos";
 
 import Like from "../../components/icons/like-icon";
 import DisLike from "../../components/icons/dislike-icon";
+import Head from "next/head";
 
 Modal.setAppElement("#__next");
 
@@ -102,6 +103,9 @@ const Video = ({ video }) => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <NavBar />
       <Modal
         isOpen={true}

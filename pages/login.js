@@ -71,6 +71,7 @@ const Login = () => {
 						setIsLoading(false);
             setUserMsg('');
             router.push('/');
+						router.reload();
           } else {
             setIsLoading(false);
             setUserMsg('Something went wrong logging in');

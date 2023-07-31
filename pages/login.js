@@ -66,6 +66,7 @@ const Login = () => {
           const loggedInResponse = await response.json();
           router.push('/');
 					setIsLoading(false);
+					router.reload();
           if (loggedInResponse.done) {
 						setIsLoading(false);
             setUserMsg('');
